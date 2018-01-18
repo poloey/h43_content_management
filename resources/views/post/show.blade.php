@@ -58,33 +58,7 @@
 
 
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-header">
-            <h2>Categories</h2>
-          </div>
-          <div class="card-body">
-            <ul class="list-group">
-              <li class="list-group-item"> <a href="#">Technology</a> </li>
-              <li class="list-group-item"> <a href="#">Web</a> </li>
-              <li class="list-group-item"> <a href="#">Mobile</a> </li>
-            </ul>
-          </div>
-        </div>
-        <div class="card mt-5">
-          <div class="card-header">
-            <h2>Author</h2>
-          </div>
-          <div class="card-body">
-            <ul class="list-group">
-              <li class="list-group-item"><a href="#">Tanim</a></li>
-              <li class="list-group-item"> <a href="#">Sumon</a> </li>
-              <li class="list-group-item"> <a href="#">Sarwar</a> </li>
-            </ul>
-          </div>
-        </div>
-        
-      </div>
+      @include('sidebar')
     </div>
   </div>
   

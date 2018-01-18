@@ -26,6 +26,10 @@ Route::get('/posts/{id}', [
   'uses' => 'PostController@show',
   'as' => 'post'
 ]);
+Route::get('/categories/{id}', [
+  'uses' => 'CategoryController@show',
+  'as' => 'category.show'
+]);
 Route::post('/comment', 'PostController@comment' )->name('comment');
 
 

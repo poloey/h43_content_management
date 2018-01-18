@@ -19,7 +19,7 @@ class PostsTableSeeder extends Seeder
           'user_id' => rand(1, count(Helpers::USERS)),
           'title' => $faker->sentence,
           'category_id' => rand(1, count(Helpers::CATEGORIES) - 1),
-          'content' => $faker->paragraph(4),
+          'content' => $faker->paragraph(35),
          'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
          'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
