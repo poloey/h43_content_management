@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 Use Faker\Factory;
 
-class PostsTableSeeder extends Seeder
+class CategoriesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,12 +14,9 @@ class PostsTableSeeder extends Seeder
     public function run()
     {
       $faker = Factory::create();
-     foreach (range(1, Helpers::NUMBER_OF_POSTS) as $i) {
-       DB::table('posts')->insert([
-          'user_id' => rand(1, count(Helpers::USERS)),
-          'title' => $faker->sentence,
-          'category_id' => rand(1, count(Helpers::CATEGORIES) - 1),
-          'content' => $faker->paragraph(4),
+     foreach (range(1, count(Helpers::CATEGORIES)) as $i) {
+       DB::table('categories')->insert([
+         'name' => Helpers::CATEGORIES[rand(0, (count(Helpers::CATEGORIES) - 1))],
          'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
          'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);

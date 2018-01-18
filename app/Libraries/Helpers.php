@@ -11,6 +11,9 @@ class Helpers {
     return $excerpt;
   }
   const NUMBER_OF_POSTS = 30;
+  const CATEGORIES = [
+    'Technology', 'Web', 'Mobile', 'Gadget', 'Computer'
+  ];
   const USERS = [
     [
       'name' => 'Sumon',
