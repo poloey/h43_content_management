@@ -14,6 +14,9 @@
           </div>
         @endforeach
 
+        <div class="p-3">
+          {{$posts->links('vendor.pagination.bootstrap-4')}}
+        </div>
 
       </div>
       @include('sidebar')
