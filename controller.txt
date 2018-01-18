@@ -1,0 +1,25 @@
+//controller
+PageController
+  index
+  author{id}
+PostController
+  show{id}
+  create
+  store
+SigninController
+  login
+  store
+  logout
+SignUpController
+  register
+  store
+
+
+// view 
+index 
+author 
+
+post.show 
+post.create 
+
+sign.login
