@@ -39,8 +39,8 @@
               </div>
               <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuButton">
                 @guest
-                <a class="dropdown-item" href="login">Login</a>
-                <a class="dropdown-item" href="register">Register</a>
+                <a class="dropdown-item" href="{{ route('login') }}">Login</a>
+                <a class="dropdown-item" href="{{ route('register') }}">Register</a>
                 @else
                 <a class="dropdown-item" href="{{route('dashboard.index')}}">Dashboard</a>
                 <a class="dropdown-item" href="{{route('logout')}}">Logout</a>
