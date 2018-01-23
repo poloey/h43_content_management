@@ -17,6 +17,15 @@
                   <input type="text" name="title" id="title" class="form-control">
               </div>
               <div class="form-group">
+                  <label for="category">Category</label>
+                  <select name="category" id="category" class="form-control">
+                    @foreach($categories as $category)
+                      <option value="{{$category->id}}" >{{$category->name}}</option>
+                    @endforeach
+                  </select>
+              </div>
+              
+              <div class="form-group">
                   <label for="content">Content</label>
                   <textarea name="content" id="content" cols="30" rows="10" class="form-control"></textarea>
               </div>

@@ -107,9 +107,9 @@ desired effect
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Main Menu</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-book"></i> <span>Posts</span></a></li>
+        <li class=""><a href="{{ route('home') }}"><i class="fa fa-home"></i> <span>Home</span></a></li>
+        <li class="active"><a href="{{ route('dashboard.index') }}"><i class="fa fa-book"></i> <span>Posts</span></a></li>
         <li class=""><a href="{{route('dashboard.create')}}"><i class="fa fa-pencil"></i> <span>Create Post</span></a></li>
-        <li class=""><a href="#"><i class="fa fa-comment"></i> <span>Comments</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

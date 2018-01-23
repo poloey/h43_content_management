@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Category;
 use App\Comment;
 use Illuminate\Http\Request;
 
@@ -13,14 +14,17 @@ class PostController extends Controller
     return view('post.show', ['post' => $post]);
   }
   public function create () {
-    return view('dashboard.create');
+    $categories = Category::all();
+    return view('dashboard.create', compact('categories'));
   }
   public function store(Request $request) {
     $title = $request->input('title');
     $content = $request->input('content');
+    $category = $request->input('category');
     Post::create([
         'title' => $title,
         'content' => $content,
+        'category_id' => $category,
         'user_id' => auth()->id()
       ]
     );

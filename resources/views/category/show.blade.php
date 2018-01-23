@@ -7,7 +7,7 @@
         <div class="my-5 p-5 bg-info text-light">
           <h2>All posts under {{$category->name}} category</h2>
         </div>
-        @foreach($category->posts as $post)
+        @foreach($posts as $post)
           <div class="card m-3">
             <div class="card-body">
               <h2><a href="{{route('post', ['id' => $post->id])}}">{{$post->title}}</a> by <a href="{{route('author', ['id' => $post->user->id])}}">{{$post->user->name}}</a> on <span class="text-muted">Dec 12, 2017</span></h2>

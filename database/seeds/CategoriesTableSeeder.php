@@ -16,7 +16,7 @@ class CategoriesTableSeeder extends Seeder
       $faker = Factory::create();
      foreach (range(1, count(Helpers::CATEGORIES)) as $i) {
        DB::table('categories')->insert([
-         'name' => Helpers::CATEGORIES[rand(0, (count(Helpers::CATEGORIES) - 1))],
+         'name' => Helpers::CATEGORIES[$i - 1],
          'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
          'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
       ]);
